@@ -30,5 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-var server = http.createServer(app);
-server.listen(3000);
+//var server = http.createServer(app);
+var porta = process.env.PORT || 8080;
+app.listen(porta);
+//server.listen(3000);
